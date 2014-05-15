@@ -19,4 +19,17 @@ describe 'ThreeAndFive ' do
   it 'should return 15 when given 15' do
     expect(threeandfive.times_five(15)).to eq(15)
   end
+  it 'should return multiples of threeandfive when passed a range' do
+    expect(threeandfive.filter_numbers(18)).to eq(18)
+  end
+  it 'should not return any other number' do
+    expect(threeandfive.filter_numbers(17)).to eq nil
+  end
+  it 'should return multiples of 3 and five between 1 and 1000' do
+    expect(threeandfive.range).to include(3,5,6,9,10)
+  end 
+  it 'should be able to add the total of all filtered numbers' do
+    expect(threeandfive.total).to eq([234168])
+  end
+
 end
