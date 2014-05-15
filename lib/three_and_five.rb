@@ -24,6 +24,7 @@ class ThreeAndFive
     result << range.compact.inject(:+)
   end
 end 
-
+puts "Here are all multiples of 3 and 5 between 0 and 1000:"
 puts ThreeAndFive.new.range
+puts "And here is the grand total of those numbers"
 puts ThreeAndFive.new.total
